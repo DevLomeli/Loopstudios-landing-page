@@ -115,6 +115,12 @@ ul {
   width: 100%;
 }
 
+@media screen and (min-width: 769px) {
+  .hamburgerMenuIcon {
+    display: none;
+  }
+}
+
 .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,6 +139,7 @@ ul {
 
 .nav ul li {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .nav ul li:last-child {
@@ -162,6 +169,45 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 2.5rem;
+}
+
+.header .nav {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .header .logo {
+    -webkit-box-flex: 0.1;
+        -ms-flex: 0.1;
+            flex: 0.1;
+  }
+  .header .nav {
+    -webkit-box-flex: 0.6;
+        -ms-flex: 0.6;
+            flex: 0.6;
+    display: block;
+    margin-bottom: 0;
+  }
+  .header .nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header .nav ul li {
+    margin-bottom: 0;
+  }
 }
 
 main {
@@ -280,6 +326,7 @@ main div h1 {
 }
 
 .info-section {
+  border: 5px solid lightcoral;
   min-height: 100vh;
   height: auto;
   display: -webkit-box;
@@ -290,8 +337,43 @@ main div h1 {
           align-items: center;
 }
 
+.info-section .image--desktop {
+  display: none;
+}
+
 .info-section img {
   width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .info-section > div {
+    border: 1px solid lightcoral;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .info-section > div > * {
+    border: 1px solid black;
+  }
+  .info-section > div .image--mobile {
+    display: none;
+  }
+  .info-section > div .image--desktop {
+    display: block;
+  }
+  .info-section > div img {
+    height: 100%;
+  }
 }
 
 .projects-section {
@@ -353,6 +435,14 @@ main div h1 {
 }
 
 @media screen and (min-width: 769px) {
+  .projects-section {
+    padding-top: 3rem;
+  }
+  .projects-section h2 {
+    margin-left: 2.5rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
   .projects-section > div .button {
     display: none;
   }

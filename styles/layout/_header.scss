@@ -1,4 +1,29 @@
 .header {
   @include flex(row, space-between, center);
   padding-top: 2.5rem;
+
+  .nav {
+    display: none;
+  }
+
+  @media screen and (min-width: 769px) {
+    .logo {
+      flex: 0.1;
+    }
+
+    .nav {
+      flex: 0.6;
+      display: block;
+      margin-bottom: 0;
+
+      ul {
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
+
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }

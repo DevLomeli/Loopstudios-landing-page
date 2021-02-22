@@ -37,6 +37,11 @@
   }
 
   @media screen and (min-width: 769px) {
+    padding-top: 3rem;
+    h2 {
+      margin-left: 2.5rem;
+      align-self: flex-start;
+    }
     > div {
       .button {
         display: none;

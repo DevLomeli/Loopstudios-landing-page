@@ -1,9 +1,38 @@
 .info-section {
+  border: 5px solid lightcoral;
   min-height: 100vh;
   height: auto;
   @include flexAlignCenter;
 
+  .image--desktop {
+    display: none;
+  }
   img {
     width: 100%;
+  }
+
+  @media screen and (min-width: 769px) {
+    > div {
+      border: 1px solid lightcoral;
+      @include flex(row, center, stretch);
+
+      > * {
+        border: 1px solid black;
+      }
+
+      .image--mobile {
+        display: none;
+      }
+
+      .image--desktop {
+        display: block;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+    img {
+    }
   }
 }

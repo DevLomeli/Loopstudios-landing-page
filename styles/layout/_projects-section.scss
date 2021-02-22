@@ -1,7 +1,7 @@
 .projects-section {
   @include flexAlignCenter;
   min-height: 100vh;
-  height: auto;
+  height: fit-content;
 
   div {
     @include flex(column, center, center);
@@ -22,6 +22,23 @@
       bottom: 20px;
       left: 20px;
       width: 24vh;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 30vh);
+      grid-template-rows: 250px 250px;
+      > * {
+        border: 1px solid lawngreen;
+        height: 100%;
+
+        img {
+          height: 100%;
+          object-fit: center;
+        }
+      }
     }
   }
 }

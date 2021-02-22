@@ -1,4 +1,5 @@
 .mobileMenu {
+  display: block;
   background: $black;
   position: absolute;
   right: -100%;
@@ -43,5 +44,9 @@
   &--active {
     right: 0;
     visibility: visible;
+  }
+
+  @media screen and (min-width: 769px) {
+    display: none;
   }
 }

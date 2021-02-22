@@ -40,7 +40,13 @@ h3 {
 
 h4 {
   color: white;
-  font-size: 4vh;
+  font-size: 2.2em;
+}
+
+@media screen and (min-width: 769px) {
+  h4 {
+    font-size: calc(3.5vw - 10px);
+  }
 }
 
 p {
@@ -317,6 +323,11 @@ main div h1 {
           align-items: center;
 }
 
+.projects-section div .cards-wrapper {
+  padding: 8vh 0;
+  padding-bottom: 0;
+}
+
 .projects-section .card {
   position: relative;
   height: -webkit-fit-content;
@@ -325,32 +336,50 @@ main div h1 {
   margin-bottom: 2rem;
 }
 
+.projects-section .card .card__image--desktop {
+  display: none;
+}
+
 .projects-section .card img {
   width: 100%;
   height: 20vh;
 }
 
 .projects-section .card h4 {
+  border: 1px solid lightcoral;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 24vh;
+  bottom: 1vw;
+  left: 1vw;
+  width: 70%;
 }
 
 @media screen and (min-width: 769px) {
-  .projects-section .cards-wrapper {
+  .projects-section > div .button {
+    display: none;
+  }
+  .projects-section > div .cards-wrapper {
+    width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (30vh)[4];
-        grid-template-columns: repeat(4, 30vh);
-    -ms-grid-rows: 250px 250px;
-        grid-template-rows: 250px 250px;
+    padding-bottom: 8vh;
+    -ms-grid-columns: (20vw)[4];
+        grid-template-columns: repeat(4, 20vw);
+    -ms-grid-rows: (30vw)[2];
+        grid-template-rows: repeat(2, 30vw);
+    gap: 2vh;
   }
-  .projects-section .cards-wrapper > * {
-    border: 1px solid lawngreen;
+  .projects-section > div .cards-wrapper .card {
     height: 100%;
+    margin-bottom: 0;
   }
-  .projects-section .cards-wrapper > * img {
+  .projects-section > div .cards-wrapper .card .card__image--desktop {
+    display: block;
+    width: 100%;
+  }
+  .projects-section > div .cards-wrapper .card .card__image--mobile {
+    display: none;
+  }
+  .projects-section > div .cards-wrapper .card img {
     height: 100%;
     -o-object-fit: center;
        object-fit: center;

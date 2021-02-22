@@ -1,0 +1,4 @@
+.hero-section {
+  @include backgroundImg("../../images/mobile/image-hero.jpg");
+  height: 100vh;
+}

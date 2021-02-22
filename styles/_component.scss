@@ -1,0 +1,39 @@
+.button {
+  border: 2px solid $black;
+  color: $black;
+  padding: 1.5vh 8vh;
+  font-size: 3vh;
+  letter-spacing: 4px;
+}
+
+.logo {
+  width: 22vh;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.hamburgerMenuIcon {
+  width: 4vh;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.nav {
+  ul {
+    @include flex(column, center, center);
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

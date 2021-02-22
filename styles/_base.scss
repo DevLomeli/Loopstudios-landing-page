@@ -1,0 +1,117 @@
+/*      COLORS      */
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0%, 0%, 0%);
+$darkGray: hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+
+/*      FONTS       */
+$alata: "Alata", sans-serif;
+$josefinSans: "Josefin Sans", sans-serif;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: $alata;
+  color: $white;
+  background: $white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $josefinSans;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 5vh;
+}
+
+h2 {
+  font-size: 4.5vh;
+  color: $black;
+  text-align: center;
+}
+
+h3 {
+  font-size: 3.8vh;
+}
+
+h4 {
+  color: $white;
+  font-size: 4vh;
+}
+
+p {
+  color: $darkGray;
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  font-size: 2.8vh;
+}
+
+/*      MIXINS      */
+@mixin backgroundImg($url) {
+  background-image: url($url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin flex($direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin marginBottom($mb) {
+  margin-bottom: $mb;
+}
+
+/*      UTILITIES       */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.border {
+  border: 1px solid #fafafa;
+}
+
+.border-children > * {
+  @extend .border;
+}
+
+.mb-1 {
+  @include marginBottom(1rem);
+}
+
+.mb-2 {
+  @include marginBottom(2rem);
+}
+
+.mb-3 {
+  @include marginBottom(3rem);
+}

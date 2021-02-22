@@ -1,0 +1,26 @@
+.footer {
+  height: 100vh;
+  background: $black;
+  @include flexAlignCenter;
+
+  > div {
+    @include flex(column, center, center);
+  }
+
+  &__socialMedia {
+    @include flex(row, center, center);
+    align-self: stretch;
+
+    a {
+      margin-right: 1rem;
+
+      img {
+        width: 3.5vh;
+      }
+    }
+
+    > a:last-child {
+      margin-right: 0;
+    }
+  }
+}

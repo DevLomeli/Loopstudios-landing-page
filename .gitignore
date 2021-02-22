@@ -16,3 +16,5 @@
 .prettierignore
 
 /design
+package.json
+package-lock.json

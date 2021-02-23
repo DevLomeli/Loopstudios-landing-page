@@ -62,6 +62,14 @@
             &--desktop {
               display: block;
               width: 100%;
+
+              &:hover {
+                filter: contrast(0.2);
+
+                & + h4 {
+                  color: $black;
+                }
+              }
             }
             &--mobile {
               display: none;

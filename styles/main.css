@@ -25,11 +25,11 @@ h4 {
 }
 
 h1 {
-  font-size: 5vh;
+  font-size: 4.5vh;
 }
 
 h2 {
-  font-size: 4.5vh;
+  font-size: 2rem;
   color: black;
   text-align: center;
 }
@@ -142,6 +142,27 @@ ul {
   cursor: pointer;
 }
 
+.nav ul li a {
+  position: relative;
+  text-transform: capitalize;
+}
+
+.nav ul li a::before {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.nav ul li a:hover::before {
+  width: 100%;
+}
+
 .nav ul li:last-child {
   margin-bottom: 0;
 }
@@ -152,6 +173,15 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+@media screen and (min-width: 769px) {
+  .hero-section {
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .header {
@@ -223,11 +253,21 @@ main {
 main div {
   width: 100%;
   border: 3px solid white;
+  padding: 2rem;
 }
 
 main div h1 {
-  margin: 2vh;
   width: 200px;
+}
+
+@media screen and (min-width: 769px) {
+  main div {
+    width: 70%;
+  }
+  main div h1 {
+    width: 100%;
+    font-size: 7vh;
+  }
 }
 
 .mobileMenu {
@@ -326,7 +366,6 @@ main div h1 {
 }
 
 .info-section {
-  border: 5px solid lightcoral;
   min-height: 100vh;
   height: auto;
   display: -webkit-box;
@@ -347,7 +386,7 @@ main div h1 {
 
 @media screen and (min-width: 769px) {
   .info-section > div {
-    border: 1px solid lightcoral;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -355,24 +394,49 @@ main div h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-  }
-  .info-section > div > * {
-    border: 1px solid black;
   }
   .info-section > div .image--mobile {
     display: none;
   }
   .info-section > div .image--desktop {
     display: block;
+    width: 50vw;
   }
-  .info-section > div img {
-    height: 100%;
+  .info-section > div article {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    left: 45%;
+    top: 35%;
+    width: 40vw;
+    height: 30vw;
+    padding: 3rem;
+    padding-left: 4rem;
+    background: white;
+  }
+  .info-section > div article h2 {
+    width: 60%;
+    text-align: left;
+  }
+  .info-section > div article p {
+    text-align: left;
   }
 }
 
@@ -464,6 +528,13 @@ main div h1 {
   .projects-section > div .cards-wrapper .card .card__image--desktop {
     display: block;
     width: 100%;
+  }
+  .projects-section > div .cards-wrapper .card .card__image--desktop:hover {
+    -webkit-filter: contrast(0.2);
+            filter: contrast(0.2);
+  }
+  .projects-section > div .cards-wrapper .card .card__image--desktop:hover + h4 {
+    color: black;
   }
   .projects-section > div .cards-wrapper .card .card__image--mobile {
     display: none;
@@ -596,6 +667,24 @@ main div h1 {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  .footer > div .footer__socialMedia a {
+    position: relative;
+  }
+  .footer > div .footer__socialMedia a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -2px;
+    left: 0;
+    background: white;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+  }
+  .footer > div .footer__socialMedia a:hover::before {
+    width: 100%;
+    height: 2px;
   }
   .footer > div p {
     -webkit-box-ordinal-group: 5;

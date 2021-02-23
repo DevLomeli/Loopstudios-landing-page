@@ -5,10 +5,21 @@ main {
   div {
     width: 100%;
     border: 3px solid $white;
+    padding: 2rem;
 
     h1 {
-      margin: 2vh;
       width: 200px;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    div {
+      width: 70%;
+
+      h1 {
+        width: 100%;
+        font-size: 7vh;
+      }
     }
   }
 }

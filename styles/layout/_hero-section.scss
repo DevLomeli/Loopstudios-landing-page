@@ -1,4 +1,8 @@
 .hero-section {
   @include backgroundImg("../images/mobile/image-hero.jpg");
   height: 100vh;
+
+  @media screen and (min-width: 769px) {
+    @include backgroundImg("../images/desktop/image-hero.jpg");
+  }
 }
